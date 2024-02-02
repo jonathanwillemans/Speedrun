@@ -19,8 +19,7 @@ def is_darkblue():
 
         # Get the pixel color at the calculated coordinates
         pixel_color = pyautogui.pixel(x_coord, y_coord)
-        print("coord: ",(x_coord, y_coord) )
-        print("color", pixel_color)
+
 
         # Check if the pixel color is within the tolerance range
         return all(target - tolerance <= actual <= target + tolerance for actual, target, tolerance in zip(pixel_color, target_color, (tolerance_range, tolerance_range, tolerance_range)))
